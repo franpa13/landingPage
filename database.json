@@ -1,0 +1,74 @@
+{
+    "coffees": [
+      {
+        "id": 1,
+        "name": "Espresso",
+        "price": 2.50,
+        "mostPopular": true,
+        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+      },
+      {
+        "id": 2,
+        "name": "Americano",
+        "price": 3.00,
+        "mostPopular": true,
+        "image": "https://images.unsplash.com/photo-1511447333014-5a1d4a21d26f"
+      },
+      {
+        "id": 3,
+        "name": "Cappuccino",
+        "price": 3.50,
+        "mostPopular": true,
+        "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"
+      },
+      {
+        "id": 4,
+        "name": "Latte",
+        "price": 3.75,
+        "mostPopular": true,
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+      },
+      {
+        "id": 5,
+        "name": "Mocha",
+        "price": 4.00,
+        "mostPopular": false,
+        "image": "https://images.unsplash.com/photo-1599041489008-1eab771dd6c6"
+      },
+      {
+        "id": 6,
+        "name": "Macchiato",
+        "price": 3.25,
+        "mostPopular": false,
+        "image": "https://images.unsplash.com/photo-1570872626481-5d8e3519a97a"
+      },
+      {
+        "id": 7,
+        "name": "Flat White",
+        "price": 3.75,
+        "mostPopular": true,
+        "image": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514"
+      },
+      {
+        "id": 8,
+        "name": "Irish Coffee",
+        "price": 4.50,
+        "mostPopular": false,
+        "image": "https://images.unsplash.com/photo-1601892901287-df1cf83fa7a8"
+      },
+      {
+        "id": 9,
+        "name": "Affogato",
+        "price": 4.00,
+        "mostPopular": false,
+        "image": "https://images.unsplash.com/photo-1571072021744-3a66f748847a"
+      },
+      {
+        "id": 10,
+        "name": "Café au Lait",
+        "price": 3.50,
+        "mostPopular": false,
+        "image": "https://images.unsplash.com/photo-1565079012871-ae991b1fdfe0"
+      }
+    ]
+  }
