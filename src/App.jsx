@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { motion } from "framer-motion";
-
+import FindUs from "./components/FindUs/FindUs";
 import { CarouselHome } from "./components/Carousel/Carousel";
 import DropDown from "./components/DropDownText/DropDownText";
 import { GoodCoffe } from "./components/GoodCoffe/GoodCoffe";
 import { About } from "./components/About/About";
 import { OurCoffes } from "./components/OurCoffes/OurCoffes";
 import Services from "./components/Services/Services";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 function App() {
@@ -69,22 +70,38 @@ function App() {
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="flex justify-center items-center md:mt-24 "
+        className="flex justify-center items-center md:mt-24 m-2 md:m-0 "
       >
         <div className="flex justify-center sm:justify-between gap-2 md:gap-24 w-full md:w-[1000px] items-center mt-3">
-        
           <motion.div
-            initial={{ x: -150, opacity: 0 }} // Aparece desde la izquierda
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{
+              x: window.innerWidth <= 800 ? 0 : -150,
+              y: window.innerWidth <= 800 ? -150 : 0,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              y: 0,
+              opacity: 1,
+            }}
             transition={{ ease: "easeInOut", duration: 1.4 }}
             className="flex flex-col-reverse w-full"
           >
             <CarouselHome images={imagesCoffes} coffe={true}></CarouselHome>
             <DropDown panaderia={true}></DropDown>
           </motion.div>
+
           <motion.div
-            initial={{ x: 150, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{
+              x: window.innerWidth <= 640 ? 0 : 150,
+              y: window.innerWidth <= 640 ? 150 : 0,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              y: 0,
+              opacity: 1,
+            }}
             transition={{ ease: "easeInOut", duration: 1.4 }}
             className="flex flex-col w-full"
           >
@@ -98,8 +115,9 @@ function App() {
         </div>
       </motion.section>
       <OurCoffes></OurCoffes>
+      <FindUs></FindUs>
+      <Footer></Footer>
     </section>
-
   );
 }
 

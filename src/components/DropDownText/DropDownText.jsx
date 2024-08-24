@@ -10,7 +10,7 @@ const DropDown = ({ panaderia, cafeteria }) => {
         <FlyoutLink
           panaderia={panaderia}
           cafateria={cafeteria}
-          href="#"
+          href="*"
           FlyoutContent={PricingContent}
         >
           {cafeteria && (
@@ -73,6 +73,7 @@ const FlyoutLink = ({
       className="relative w-fit h-fit"
     >
       <a
+      onClick={(e) => e.preventDefault()}
         href={href}
         className="flex gap-[1px] md:gap-2 items-start flex-row-reverse  justify-end mt-2 relative text-black text-xs md:text-2xl"
       >

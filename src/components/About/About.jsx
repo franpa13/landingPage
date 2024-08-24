@@ -17,7 +17,7 @@ export const About = () => {
         alt=""
       />
       <p className="md:w-2/3 text-xs text-center font-medium  md:text-2xl">
-        Somos una lines de comercios especializado en cafetería y panadería
+        Somos una linea de restaurantes especializado en cafetería y panadería
         fundada en S.S de Jujuy, con más de 21 años de experiencia en el sector
         de la gastronomia.
       </p>
