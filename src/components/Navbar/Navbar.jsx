@@ -98,8 +98,7 @@ function Navbar() {
         ))}
       </List>
       <a
-        href="https://www.google.com.ar/maps/place/FranKini/@-24.2653321,-65.224704,5673m/data=!3m1!1e3!4m10!1m2!2m1!1scafeteria!3m6!1s0x941b07a63c757f31:0xd9747c6f880e165c!8m2!3d-24.2549726!4d-65.2033586!15sCgljYWZldGVyaWFaCyIJY2FmZXRlcmlhkgEEY2FmZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSQ2FFeGxURFJSUlJBQuABAA!16s%2Fg%2F11s7c1xs2r?entry=ttu"
-        target="_blank"
+        href="#place"
         className="absolute bottom-0 mb-5 font-playfair text-white flex justify-center items-center"
       >
         <LocationOnOutlinedIcon />
@@ -111,7 +110,6 @@ function Navbar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
@@ -183,12 +181,11 @@ function Navbar() {
             })}
           </Box>
           <a
-            href="https://www.google.com.ar/maps/place/FranKini/@-24.2653321,-65.224704,5673m/data=!3m1!1e3!4m10!1m2!2m1!1scafeteria!3m6!1s0x941b07a63c757f31:0xd9747c6f880e165c!8m2!3d-24.2549726!4d-65.2033586!15sCgljYWZldGVyaWFaCyIJY2FmZXRlcmlhkgEEY2FmZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSQ2FFeGxURFJSUlJBQuABAA!16s%2Fg%2F11s7c1xs2r?entry=ttu"
-            target="_blank"
+            href="#place"
             className="hidden  lg:flex font-playfair text-white justify-center items-center relative gap-2 group hover:text-ligthYellow"
           >
             <LocationOnOutlinedIcon />
-            <p>Localizar tienda</p>
+            <p>Ubicacion</p>
             <span className="absolute top-11 left-0 w-0 h-[1px] bg-ligthYellow transition-all duration-500 ease-in-out group-hover:w-full"></span>
           </a>
         </Toolbar>

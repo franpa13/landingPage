@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 export const About = () => {
   return (
-    <div className="flex justify-center my-12 flex-col items-center ">
+    <div id="us"  className="flex justify-center my-6 md:my-12 flex-col items-center ">
       <motion.img
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

@@ -65,7 +65,7 @@ function App() {
       <CarouselHome images={imagesFirstCarousel}></CarouselHome>
       <GoodCoffe></GoodCoffe>
       <Services></Services>
-      <About></About>
+      <About ></About>
       <motion.section
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

@@ -48,7 +48,10 @@ export default function FindUs() {
   const handleOpen = (index) => setOpenModal(index);
   const handleClose = () => setOpenModal(null);
   return (
-    <div className=" md:mt-5 flex items-center flex-col md:flex-row gap-0 md:gap-8  md:justify-center md:items-center">
+    <div
+      id="place"
+      className=" md:mt-5 flex items-center flex-col md:flex-row-reverse gap-0 md:gap-8  md:justify-center md:items-center"
+    >
       <motion.img
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
@@ -61,12 +64,12 @@ export default function FindUs() {
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.85 }}
-        className="flex flex-col gap-2 md:gap-10 items-center justify-start mt-2 md:mt-0 md:w-1/2 "
+        className="md:ml-40 flex flex-col gap-2 md:gap-10 items-center   justify-center mt-2 md:mt-0 md:w-1/2 "
       >
         <h1 className="text-black text-2xl md:text-5xl md:mt-0 text-start w-full font-semibold">
           Encontranos
         </h1>
-        <div className=" w-full bg-white md:mt-2 flex justify-start md:gap-10 flex-col items-start">
+        <div className=" w-full md:mt-2 flex justify-start md:gap-10 flex-col items-start">
           <div className="flex flex-col gap-0 md:gap-0">
             <span className="text-xl md:text-3xl  text-ligthYellowText">
               Horarios

@@ -8,8 +8,8 @@ export default {
       },
       colors: {
         ligthYellow: "#CDB587",
-        ligthYellowText: "#A6825A",
-        bgNavbar :"#1b1b1b"
+        ligthYellowText: "#5C472E",
+        bgNavbar: "#1b1b1b",
       },
     },
   },

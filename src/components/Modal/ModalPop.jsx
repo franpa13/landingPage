@@ -98,7 +98,7 @@ export default function ModalPop({
         <Fade in={open}>
           <Box sx={style}>
             <div className="flex flex-col justify-center font-playfair">
-              <img className="w-full h-[300px] rounded-md" src={image} alt="" />
+              <img className="w-full md:h-[300px] rounded-md" src={image} alt="" />
 
               <div className="p-1 gap-2 flex justify-center items-end text-xl ">
                 <p>{ubi}</p>

@@ -19,7 +19,7 @@ export const OurCoffes = () => {
           <StoreOutlinedIcon
             sx={{
               fontWeight: "semibold",
-              fontSize: { xs: "16px", sm: "32px", md: "40px" }, // Tamaño para diferentes pantallas
+              fontSize: { xs: "16px", sm: "32px", md: "40px" }, 
             }}
           />
         </div>
@@ -32,7 +32,7 @@ export const OurCoffes = () => {
         <div className="flex justify-center p-1 md:p-3 border text-white rounded-md border-ligthYellow-[1px] hover:bg-ligthYellow hover:text-black transition-all duration-300 ease-in-out transform hover:scale-105">
           <CoffeeOutlinedIcon
             sx={{
-              fontSize: { xs: "16px", sm: "32px", md: "40px" }, // Tamaño para diferentes pantallas
+              fontSize: { xs: "16px", sm: "32px", md: "40px" }, 
             }}
           />
         </div>

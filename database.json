@@ -1,74 +1,249 @@
 {
-    "coffees": [
-      {
-        "id": 1,
-        "name": "Espresso",
-        "price": 2.50,
-        "mostPopular": true,
-        "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
-      },
-      {
-        "id": 2,
-        "name": "Americano",
-        "price": 3.00,
-        "mostPopular": true,
-        "image": "https://images.unsplash.com/photo-1511447333014-5a1d4a21d26f"
-      },
-      {
-        "id": 3,
-        "name": "Cappuccino",
-        "price": 3.50,
-        "mostPopular": true,
-        "image": "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce"
-      },
-      {
-        "id": 4,
-        "name": "Latte",
-        "price": 3.75,
-        "mostPopular": true,
-        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93"
-      },
-      {
-        "id": 5,
-        "name": "Mocha",
-        "price": 4.00,
-        "mostPopular": false,
-        "image": "https://images.unsplash.com/photo-1599041489008-1eab771dd6c6"
-      },
-      {
-        "id": 6,
-        "name": "Macchiato",
-        "price": 3.25,
-        "mostPopular": false,
-        "image": "https://images.unsplash.com/photo-1570872626481-5d8e3519a97a"
-      },
-      {
-        "id": 7,
-        "name": "Flat White",
-        "price": 3.75,
-        "mostPopular": true,
-        "image": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514"
-      },
-      {
-        "id": 8,
-        "name": "Irish Coffee",
-        "price": 4.50,
-        "mostPopular": false,
-        "image": "https://images.unsplash.com/photo-1601892901287-df1cf83fa7a8"
-      },
-      {
-        "id": 9,
-        "name": "Affogato",
-        "price": 4.00,
-        "mostPopular": false,
-        "image": "https://images.unsplash.com/photo-1571072021744-3a66f748847a"
-      },
-      {
-        "id": 10,
-        "name": "Café au Lait",
-        "price": 3.50,
-        "mostPopular": false,
-        "image": "https://images.unsplash.com/photo-1565079012871-ae991b1fdfe0"
-      }
-    ]
-  }
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Cappuccino",
+      "image": "https://kitucafe.com/wp-content/uploads/2019/08/cappuccino-e1564782716177.jpg",
+      "price": "$5.20",
+      "rating": 4.7,
+      "votes": 65,
+      "popular": 20,
+      "available": true,
+      "category":"coffe"
+    },
+    {
+      "id": 2,
+      "name": "House Coffee",
+      "image": "https://th.bing.com/th/id/OIP.Jy7K0v9D1bmE62T1vyOErAHaE8?rs=1&pid=ImgDetMain",
+      "price": "$3.50",
+      "rating": 4.85,
+      "votes": 15,
+      "popular": 4,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 3,
+      "name": "Espresso",
+      "image": "https://th.bing.com/th/id/OIP.zv07lmjM8Mon4HTv1nGsFgHaE8?rs=1&pid=ImgDetMain",
+      "price": "$2.50",
+      "rating": 4.9,
+      "votes": 55,
+      "popular": false,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 4,
+      "name": "Coffee Latte",
+      "image": "https://th.bing.com/th/id/OIP.Mw6X_Bqpy7Lgh1FyS4-MJwHaE8?rs=1&pid=ImgDetMain",
+      "price": "$4.50",
+      "rating": 5.0,
+      "votes": 23,
+      "popular": false,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 5,
+      "name": "Chocolate Coffee",
+      "image": "https://th.bing.com/th/id/OIP.CZrRZgTBvAnAjnTgSBzYSwHaE7?rs=1&pid=ImgDetMain",
+      "price": "$4.00",
+      "rating": 4.65,
+      "votes": 122,
+      "popular": false,
+      "available": false,
+            "category":"coffe"
+    },
+    {
+      "id": 6,
+      "name": "Valentine Special",
+      "image": "https://th.bing.com/th/id/OIP.Nyj53mODXDuJGw4sDaHLigHaE6?rs=1&pid=ImgDetMain",
+      "price": "$5.50",
+      "rating": null,
+      "votes": 0,
+      "popular": false,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 13,
+      "name": "Mocha",
+      "image": "https://th.bing.com/th/id/OIP.-RMF64r8jKR9nxe2h1Os2gHaE8?rs=1&pid=ImgDetMain",
+      "price": "$4.70",
+      "rating": 4.8,
+      "votes": 88,
+      "popular": 4,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 14,
+      "name": "French Press",
+      "image": "https://th.bing.com/th/id/OIP.3ykceaNtBXJkYukp0h0dZQHaE7?rs=1&pid=ImgDetMain",
+      "price": "$5.00",
+      "rating": 4.9,
+      "votes": 99,
+      "popular": 4,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 15,
+      "name": "Americano",
+      "image": "https://th.bing.com/th/id/OIP.T33smBMTraKBSUfSh_LRJQHaD3?rs=1&pid=ImgDetMain",
+      "price": "$2.90",
+      "rating": 4.7,
+      "votes": 54,
+      "popular": false,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 18,
+      "name": "Chai Latte",
+      "image": "https://th.bing.com/th/id/OIP._0zcVucIBdBMfSwHLQataAHaE8?rs=1&pid=ImgDetMain",
+      "price": "$4.20",
+      "rating": 4.7,
+      "votes": 48,
+      "popular": false,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 19,
+      "name": "Macchiato",
+      "image": "https://aboveaveragecoffee.com/wp-content/uploads/2021/05/Espresso-Macchiato-What-it-is-how-to-make-it-how-it-tastes.jpg",
+      "price": "$4.00",
+      "rating": 4.5,
+      "votes": 61,
+      "popular": 4,
+      "available": true,
+            "category":"coffe"
+    },
+    {
+      "id": 21,
+      "name": "Café au Lait",
+      "image": "https://th.bing.com/th/id/OIP.gZqfA3lseChBtdXIhCCI-AHaE8?rs=1&pid=ImgDetMain",
+      "price": "$4.60",
+      "rating": 4.9,
+      "votes": 82,
+      "popular": 4,
+      "available": true,
+            "category":"coffe"
+    }
+  ],
+  "bakery": [
+    {
+      "id": 7,
+      "name": "Blueberry Muffin",
+      "image": "https://th.bing.com/th/id/OIP.0MC_oOgv-UHUxi71xBC_KAHaFz?w=620&h=486&rs=1&pid=ImgDetMain",
+      "price": "$2.80",
+      "rating": 4.5,
+      "votes": 47,
+      "popular": 4,
+      "available": true,
+      "category":"bakery"
+    },
+    {
+      "id": 8,
+      "name": "Croissant",
+      "image": "https://th.bing.com/th/id/OIP.tkb7l6QJg4csrSU6RZYZRwHaE8?rs=1&pid=ImgDetMain",
+      "price": "$3.00",
+      "rating": 4.8,
+      "votes": 67,
+      "popular": 4,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 9,
+      "name": "Baguette",
+      "image": "https://th.bing.com/th/id/OIP.0iRSimHKq0bmeRGH4BCWFAHaEu?w=700&h=446&rs=1&pid=ImgDetMain",
+      "price": "$2.50",
+      "rating": 4.4,
+      "votes": 38,
+      "popular": false,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 10,
+      "name": "Cinnamon Roll",
+      "image": "https://th.bing.com/th/id/OIP.Tk_MfgWrxG29xkfAfPh8tgHaJ4?w=600&h=800&rs=1&pid=ImgDetMain",
+      "price": "$3.20",
+      "rating": 4.9,
+      "votes": 78,
+      "popular": 4,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 11,
+      "name": "Almond Croissant",
+      "image": "https://th.bing.com/th/id/R.934a7e09e44a8dfd075bddc70e22b720?rik=1T%2fL4S8eA%2b9KOw&pid=ImgRaw&r=0",
+      "price": "$3.50",
+      "rating": 4.6,
+      "votes": 59,
+      "popular": false,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 12,
+      "name": "Raisin Bread",
+      "image": "https://th.bing.com/th/id/OIP.wHvVEQ9a3E9IMbcSls-KNAAAAA?rs=1&pid=ImgDetMain",
+      "price": "$3.00",
+      "rating": 4.3,
+      "votes": 33,
+      "popular": false,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 16,
+      "name": "Scone",
+      "image": "https://th.bing.com/th/id/OIP.YfgNXVtWVNaRQNhOhfoA2wHaE8?rs=1&pid=ImgDetMain",
+      "price": "$2.50",
+      "rating": 4.4,
+      "votes": 32,
+      "popular": false,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 17,
+      "name": "Pumpkin Bread",
+      "image": "https://bluebowlrecipes.com/wp-content/uploads/2018/09/streusel-pumpkin-bread-5809-1024x1536.jpg",
+      "price": "$3.50",
+      "rating": 4.8,
+      "votes": 76,
+      "popular": 4,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 20,
+      "name": "Banana Bread",
+      "image": "https://th.bing.com/th/id/OIP.zjb8_Zl6Pr5XIoCp1amX1gAAAA?rs=1&pid=ImgDetMain",
+      "price": "$3.00",
+      "rating": 4.6,
+      "votes": 64,
+      "popular": 4,
+      "available": true,
+       "category":"bakery"
+    },
+    {
+      "id": 22,
+      "name": "Pain au Chocolat",
+      "image": "https://th.bing.com/th/id/OIP._7NKk_S7nS-ayYWeCnUpTwHaE8?rs=1&pid=ImgDetMain",
+      "price": "$3.20",
+      "rating": 4.9,
+      "votes": 85,
+      "popular": 4,
+      "available": true,
+       "category":"bakery"
+    }
+  ]
+}
+
