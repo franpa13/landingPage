@@ -1,8 +1,19 @@
-# React + Vite
+# CAFETERIA Y PANADERIA RIMBERIO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta landing page esta compuesta de 3 secciones claras que serian : home - productos - contacto .
+Tecnologias usadas : 
+React Js - React Router Dom -  Material UI - Tailwind Css - Framer Motion - Axios
 
-Currently, two official plugins are available:
+# PASOS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1- clonar el repositorio
+2- ejectutar npm install 
+3- npm run dev
+
+# RECOMENDACIONES
+
+RECOMIENDO USAR MOBILE FIRST O ALGUNA EXTENSION DE CHROME O DE SU NAVEGADOR PARA PROBAR EL RESPONSIVE DE LA WEB https://www.webmobilefirst.com/en/ 
+
+Desde ya muchas gracias y saludos!!
+  
+
