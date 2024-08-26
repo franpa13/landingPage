@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { motion } from "framer-motion";
 import FindUs from "./components/FindUs/FindUs";
@@ -8,14 +9,16 @@ import { GoodCoffe } from "./components/GoodCoffe/GoodCoffe";
 import { About } from "./components/About/About";
 import { OurCoffes } from "./components/OurCoffes/OurCoffes";
 import Services from "./components/Services/Services";
-import Footer from "./components/Footer/Footer";
+import { useLocation } from "react-router-dom";
+import FooterComponent from "./components/FooterComponent/FooterComponent";
 import "./App.css";
 
 function App() {
+
   const imagesFirstCarousel = [
     {
       title: "rimberio",
-      image: "/rimberiofirstimage.png",
+      image: "/rimberiofirstimage.jpg",
     },
     {
       name: "barra Rimberio",
@@ -43,7 +46,7 @@ function App() {
         "https://static.wixstatic.com/media/e3e4d8_9eb47653aeb84c91868338d572fc85be~mv2.jpg/v1/fill/w_430,h_280,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/e3e4d8_9eb47653aeb84c91868338d572fc85be~mv2.jpg",
     },
   ];
-  const imagesPan = [
+  const imagesBakery = [
     {
       title: "pastel",
       image:
@@ -65,7 +68,7 @@ function App() {
       <CarouselHome images={imagesFirstCarousel}></CarouselHome>
       <GoodCoffe></GoodCoffe>
       <Services></Services>
-      <About ></About>
+      <About></About>
       <motion.section
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -106,7 +109,7 @@ function App() {
             className="flex flex-col w-full"
           >
             <CarouselHome
-              images={imagesPan}
+              images={imagesBakery}
               coffe={true}
               pan={true}
             ></CarouselHome>
@@ -116,7 +119,7 @@ function App() {
       </motion.section>
       <OurCoffes></OurCoffes>
       <FindUs></FindUs>
-      <Footer></Footer>
+      <FooterComponent></FooterComponent>
     </section>
   );
 }

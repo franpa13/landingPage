@@ -23,24 +23,26 @@ export default function RatingComponent({ contador }) {
         "& > legend": { mt: 2 },
         display: "flex",
         flexDirection: "column-reverse",
-
+        justifyContent:"start",
         gap: "6px",
       }}
     >
-      <StyledRating defaultValue={2} name="customized-color">
-        <Rating
-          name="simple-controlled"
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-          precision={0.5}
-    
-        />
-      </StyledRating>
-      <span className="text-xs md:text-lg">
+      <span className="text-xs md:text-sm flex flex-col-reverse">
         Rating del publico : {contador}
       </span>
+      <div className="flex flex-wrap items-center ">
+        <p className="text-base">Califica el producto : </p>
+        <StyledRating defaultValue={2} name="customized-color">
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+            precision={0.5}
+          />
+        </StyledRating>
+      </div>
     </Box>
   );
 }

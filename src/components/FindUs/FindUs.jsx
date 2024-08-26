@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import ModalPop from "../Modal/ModalPop";
 import { FaTiktok } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
+
+import { useLocation } from "react-router-dom";
 import { FaInstagramSquare } from "react-icons/fa";
+import TouchAppOutlinedIcon from '@mui/icons-material/TouchAppOutlined';
 import {
   motion,
   useMotionTemplate,
@@ -12,7 +16,16 @@ import {
 import { useState } from "react";
 export default function FindUs() {
   const [openModal, setOpenModal] = useState(null);
+  const location = useLocation();
 
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   const locales = [
     {
       title: "Jujuy",
@@ -49,8 +62,8 @@ export default function FindUs() {
   const handleClose = () => setOpenModal(null);
   return (
     <div
-      id="place"
-      className=" md:mt-5 flex items-center flex-col md:flex-row-reverse gap-0 md:gap-8  md:justify-center md:items-center"
+    id="place" 
+      className=" mb-10  md:mb-10 lg:mb-0 md:mt-5 flex items-center flex-col md:flex-row-reverse gap-0 md:gap-8  md:justify-center md:items-center"
     >
       <motion.img
         initial={{ x: -50, opacity: 0 }}
@@ -64,7 +77,8 @@ export default function FindUs() {
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.85 }}
-        className="md:ml-40 flex flex-col gap-2 md:gap-10 items-center   justify-center mt-2 md:mt-0 md:w-1/2 "
+       
+        className="md:ml-40  flex flex-col gap-2 md:gap-10 items-center   justify-center mt-2 md:mt-0 md:w-1/2 "
       >
         <h1 className="text-black text-2xl md:text-5xl md:mt-0 text-start w-full font-semibold">
           Encontranos
@@ -74,25 +88,29 @@ export default function FindUs() {
             <span className="text-xl md:text-3xl  text-ligthYellowText">
               Horarios
             </span>
-            <p className="text-xl md:text-2xl">Lu -Vi: 8:00hs – 20:30hs</p>
-            <p className="text-xl md:text-2xl">
+            <p className="text-lg md:text-2xl">Lu -Vi: 8:00hs – 20:30hs</p>
+            <p className="text-lg md:text-2xl">
               Findes y feriados: 9:00hs – 20:30hs
             </p>
           </div>
 
-          <div className="flex w-full mt-3 md:mt-0  justify-between  md:flex-col md:gap-10">
+          <div   className="flex w-full mt-3 md:mt-0  justify-between  md:flex-col md:gap-10">
             <div>
-              <span className="text-xl md:text-3xl  text-ligthYellowText">
+              <span  className="text-xl md:text-3xl  text-ligthYellowText">
                 Locales
+
               </span>
               {locales.map((local, index) => {
                 return (
                   <div className="cursor-pointer" key={index}>
                     <p
-                      className="cursor-pointer text-xl md:text-2xl hover:text-ligthYellowText"
+                      className="cursor-pointer text-lg md:text-2xl hover:text-ligthYellowText"
                       onClick={() => handleOpen(index)}
                     >
-                      {local.title}
+                     <span>
+                     {local.title}
+                     <TouchAppOutlinedIcon></TouchAppOutlinedIcon>
+                      </span> 
                     </p>
                     {openModal === index && (
                       <ModalPop
@@ -113,7 +131,7 @@ export default function FindUs() {
               <span className="text-xl md:text-3xl  text-ligthYellowText">
                 Redes Sociales
               </span>
-              <div className="flex gap-6">
+              <div  className="flex gap-6">
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/in/francisco-paredes-354a2b26b/"
@@ -126,7 +144,7 @@ export default function FindUs() {
                 >
                   <FaInstagramSquare className="text-[25px] sm:text-[30px] md:text-[40px]" />
                 </a>
-                <a
+                <a 
                   target="_blank"
                   href="https://www.linkedin.com/in/francisco-paredes-354a2b26b/"
                 >

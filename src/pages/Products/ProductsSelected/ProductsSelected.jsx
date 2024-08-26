@@ -10,7 +10,7 @@ export default function ProductsSelected({
 }) {
   const controls = useAnimation();
 
-  // Define la animación que se activa cuando cambia el estado `selected`
+
   React.useEffect(() => {
     controls.start({
       opacity: 0,
@@ -31,7 +31,7 @@ export default function ProductsSelected({
     >
       {selected === "Todos"
         ? products.map((prod) => <Card key={prod.id} prod={prod} />)
-        : selected === "Panaderia"
+        : selected === "Pasteleria"
         ? bakeries.map((prod) => <Card key={prod.id} prod={prod} />)
         : coffes.map((prod) => <Card key={prod.id} prod={prod} />)}
     </motion.div>

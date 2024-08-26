@@ -22,17 +22,22 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import EmojiFoodBeverageOutlinedIcon from "@mui/icons-material/EmojiFoodBeverageOutlined";
 import PhoneEnabledOutlinedIcon from "@mui/icons-material/PhoneEnabledOutlined";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { LinkOffRounded } from "@mui/icons-material";
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const navigate = useNavigate();
+
   const [open, setOpen] = React.useState(false);
+
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
+  };
+  const handleClick = () => {
+    navigate("/", { state: { scrollTo: "place" } });
   };
   const navigation = [
     {
@@ -98,7 +103,7 @@ function Navbar() {
         ))}
       </List>
       <a
-        href="#place"
+        onClick={handleClick}
         className="absolute bottom-0 mb-5 font-playfair text-white flex justify-center items-center"
       >
         <LocationOnOutlinedIcon />
@@ -106,13 +111,6 @@ function Navbar() {
       </a>
     </Box>
   );
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
     <AppBar color="inherit" position="sticky" sx={{ bgcolor: "#1b1b1b" }}>
@@ -181,8 +179,8 @@ function Navbar() {
             })}
           </Box>
           <a
-            href="#place"
-            className="hidden  lg:flex font-playfair text-white justify-center items-center relative gap-2 group hover:text-ligthYellow"
+            onClick={handleClick}
+            className="hidden cursor-pointer  lg:flex font-playfair text-white justify-center items-center relative gap-2 group hover:text-ligthYellow"
           >
             <LocationOnOutlinedIcon />
             <p>Ubicacion</p>

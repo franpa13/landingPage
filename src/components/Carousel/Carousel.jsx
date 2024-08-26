@@ -5,14 +5,13 @@ import { Item } from "./Item";
 export function CarouselHome({ images, coffe, pan }) {
   return (
     <Carousel
-      indicators={false}
-      animation="fade"
-      duration={600}
-      interval={2200}
-      swipe={100}
-      
+      animation={coffe ? "fade" : "slide"}
+      duration={1000}
+      interval={2000}
+      swipe={1500}
       fullHeightHover={true}
-      navButtonsAlwaysInvisible
+      IndicatorIcon={false}
+       indicators={false}
       sx={{
         "& .MuiCarousel-indicators": {
           display: "none !important",

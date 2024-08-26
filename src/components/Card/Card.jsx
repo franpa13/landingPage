@@ -27,7 +27,7 @@ const Card = ({ prod }) => {
           </p>
         ) : (
           <p className="text-sm font-medium uppercase tracking-widest  text-white">
-            panaderia
+            pasteleria
           </p>
         )}
 

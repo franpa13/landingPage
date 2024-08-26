@@ -3,10 +3,11 @@ import Navbar from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import BakeryDiningOutlinedIcon from "@mui/icons-material/BakeryDiningOutlined";
 import ProductsSelected from "./ProductsSelected/ProductsSelected";
-import Footer from "../../components/Footer/Footer";
+
 import { useProducts } from "../../services/useProducts";
 import { motion } from "framer-motion";
 import StaggeredDropDown from "../../components/Dropdown/StaggeredDropDown";
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 export default function Products() {
   const [products, setProducts] = useState([]);
   const [coffes, setCoffes] = useState([]);
@@ -51,7 +52,7 @@ export default function Products() {
           </p>
         </div>
       </motion.div>
-      <section className="flex items-start gap-6 flex-col px-2  md:px-12">
+      <section className="flex items-start mb-8 gap-6 flex-col px-2  md:px-12">
         <div>
           <StaggeredDropDown selected={selected} setSelected={setSelected} />
         </div>
@@ -62,7 +63,7 @@ export default function Products() {
           selected={selected}
         ></ProductsSelected>
       </section>
-      <Footer></Footer>
+      <FooterComponent></FooterComponent>
     </div>
   );
 }

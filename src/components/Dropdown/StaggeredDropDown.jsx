@@ -14,7 +14,12 @@ const StaggeredDropDown = ({ setSelected, selected }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="p-0 mt-4 md:mt-8 md:p-0 pb-0 flex items-center justify-center bg-white">
+    <motion.div
+      initial={{ y: 48, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      className="p-0 mt-4 md:mt-8 md:p-0 pb-0 flex items-center justify-center bg-white"
+    >
       <motion.div animate={open ? "open" : "closed"} className="relative">
         <button
           onClick={() => setOpen((pv) => !pv)}
@@ -47,11 +52,11 @@ const StaggeredDropDown = ({ setSelected, selected }) => {
             text="Cafeteria"
           />
           <Option
-            option={"Panaderia"}
+            option={"Pasteleria"}
             setSelected={setSelected}
             setOpen={setOpen}
             Icon={BakeryDiningOutlinedIcon}
-            text="Panaderia"
+            text="Pasteleria"
           />
           <Option
             option={"Todos"}
@@ -62,7 +67,7 @@ const StaggeredDropDown = ({ setSelected, selected }) => {
           />
         </motion.ul>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
