@@ -5,10 +5,9 @@ export const GoodCoffe = () => {
   const { scrollYProgress } = useScroll();
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
-  // Determina si la pantalla es pequeña o mediana
-  const isSmallScreen = useMediaQuery("(max-width: 1024px)"); // Puedes ajustar este valor según tus necesidades
 
-  // Configuración de posiciones para pantallas grandes
+  const isSmallScreen = useMediaQuery("(max-width: 1024px)"); 
+ 
   const beanPositionsLarge = [
     { top: "15%", left: "50%", rotate: 4 },
     { top: "10%", left: "80%", rotate: -14 },
@@ -20,7 +19,7 @@ export const GoodCoffe = () => {
     { top: "92%", left: "2%", rotate: -80 },
   ];
 
-  // Configuración de posiciones para pantallas pequeñas y medianas
+
   const beanPositionsSmall = [
     { top: "80%", left: "50%", rotate: 4 },
     { top: "60%", left: "85%", rotate: -14 },
