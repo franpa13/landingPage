@@ -59,7 +59,7 @@ export default function Products() {
       <section className="flex items-start mb-8 gap-6 flex-col px-2  md:px-12">
         <div className="flex justify-between items-end w-full ">
           <StaggeredDropDown selected={selected} setSelected={setSelected} />
-          <span className="text-xl font-semibold flex justify-center items-end gap-3"><StarHalfIcon></StarHalfIcon> Califica nuestros productos !<StarHalfIcon></StarHalfIcon> </span>
+          <span className="text-sm md:text-xl font-semibold flex justify-center items-center md:items-end gap-1 md:gap-3"><StarHalfIcon></StarHalfIcon> Califica nuestros productos !<StarHalfIcon></StarHalfIcon> </span>
         </div>
         <ProductsSelected
           bakeries={bakeries}

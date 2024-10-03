@@ -53,14 +53,14 @@ export default function Form() {
       initial={{ y: 48, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 1.4 }}
-      className="  absolute top-32 md:top-64 left-0 right-0 dark:bg-gray-900 flex justify-center items-center flex-col "
+      className="  absolute top-32 md:top-64 left-0 right-0  flex justify-center items-center flex-col "
     >
       <div className=" w-4/5 py-2 lg:py-4 px-4 mx-auto max-w-screen-md bg-white rounded-lg border-[2px] border-ligthYellow">
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6 ">
           <div>
             <label
               for="email"
-              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-gray-300"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 "
             >
               Email
             </label>
@@ -70,7 +70,7 @@ export default function Form() {
               type="email"
               id="email"
               onChange={handleChange}
-              className="shadow-sm md:text-lg bg-gray-50 border text-gray-900 text-sm rounded-lg  block w-full p-2.5  dark:text-white  dark:shadow-sm-light outline-none"
+              className="shadow-sm md:text-lg bg-gray-50 border text-gray-900 text-sm rounded-lg  block w-full p-2.5   outline-none"
               placeholder="name@flowbite.com"
           
             />
@@ -78,7 +78,7 @@ export default function Form() {
           <div>
             <label
               for="subject"
-              className=" block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-gray-300"
+              className=" block mb-2 text-sm md:text-lg font-medium text-gray-900 "
             >
               Nombre
             </label>
@@ -88,7 +88,7 @@ export default function Form() {
               name="name"
               type="text"
               id="subject"
-              className="outline-none block p-3 w-full md:text-lg text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              className="outline-none block p-3 w-full md:text-lg text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
               placeholder="Ingrese su nombre..."
              
             />
@@ -96,7 +96,7 @@ export default function Form() {
           <div className="sm:col-span-2">
             <label
               for="message"
-              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 dark:text-gray-400"
+              className="block mb-2 text-sm md:text-lg font-medium text-gray-900 "
             >
               Su mensaje
             </label>
@@ -106,7 +106,7 @@ export default function Form() {
               name="message"
               id="message"
               rows="6"
-              className="outline-none block p-2.5 w-full md:text-lg text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              className="outline-none block p-2.5 w-full md:text-lg text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
               placeholder="Por favor comentenos su inquietud o duda..."
             ></textarea>
           </div>
