@@ -3,8 +3,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import BakeryDiningOutlinedIcon from "@mui/icons-material/BakeryDiningOutlined";
 import ProductsSelected from "./ProductsSelected/ProductsSelected";
-
-import { useProducts } from "../../services/useProducts";
+import { useProductsBakery } from "../../services/useProducts";
+import { useProductsCoffes } from "../../services/useProducts";
 import { motion } from "framer-motion";
 import StaggeredDropDown from "../../components/Dropdown/StaggeredDropDown";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
@@ -15,17 +15,20 @@ export default function Products() {
   const [selected, setSelected] = useState("Todos");
   useEffect(() => {
     const cargarProductos = async () => {
-      const data = await useProducts();
-      if (data) {
-        const allProducts = [...data.coffees, ...data.bakery];
+      const dataCoffe = await useProductsCoffes();
+      const dataBakery = await useProductsBakery()
+      if (dataCoffe && dataBakery) {
+        const allProducts = [...dataCoffe, ...dataBakery];
         setProducts(allProducts);
-        setCoffes(data.coffees);
-        setBakeries(data.bakery);
+        setCoffes(dataCoffe);
+        setBakeries(dataBakery);
+        
       }
     };
 
     cargarProductos();
   }, []);
+console.log(coffes , "esto son los cafes ");
 
   return (
     <div className="font-playfair">
