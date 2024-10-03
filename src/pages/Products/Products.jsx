@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import BakeryDiningOutlinedIcon from "@mui/icons-material/BakeryDiningOutlined";
+import StarHalfIcon from '@mui/icons-material/StarHalf';
 import ProductsSelected from "./ProductsSelected/ProductsSelected";
 import { useProductsBakery } from "../../services/useProducts";
 import { useProductsCoffes } from "../../services/useProducts";
@@ -9,6 +10,7 @@ import { motion } from "framer-motion";
 import StaggeredDropDown from "../../components/Dropdown/StaggeredDropDown";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
 export default function Products() {
+  const [loading , setLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [coffes, setCoffes] = useState([]);
   const [bakeries, setBakeries] = useState([]);
@@ -16,19 +18,18 @@ export default function Products() {
   useEffect(() => {
     const cargarProductos = async () => {
       const dataCoffe = await useProductsCoffes();
-      const dataBakery = await useProductsBakery()
+      const dataBakery = await useProductsBakery();
       if (dataCoffe && dataBakery) {
         const allProducts = [...dataCoffe, ...dataBakery];
         setProducts(allProducts);
         setCoffes(dataCoffe);
         setBakeries(dataBakery);
-        
       }
+      setLoading(false);
     };
 
     cargarProductos();
   }, []);
-console.log(coffes , "esto son los cafes ");
 
   return (
     <div className="font-playfair">
@@ -37,16 +38,16 @@ console.log(coffes , "esto son los cafes ");
         initial={{ y: 48, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className=" flex flex-row-reverse items-center md:items-start p-2 bg-ligthYellow md:py-8"
+        className=" flex flex-row-reverse items-center md:items-start p-2 bg-ligthYellow md:py-4"
       >
         <img
-          className="w-1/3 md:w-1/4"
+          className="w-1/3 md:w-1/5 rounded-md"
           src="https://estaticos.qdq.com/swdata/photos/203/203718935/0b9704470d2d40d9b0d703d323151da1.jpg"
           alt="products"
         />
         <div className="flex flex-col justify-center gap-3 items-start md:items-center px-3 md:px-12">
-          <h1 className=" md:text-5xl">Nuestros Productos</h1>
-          <p className="text-start md:mt-5 md:text-center text-xs md:text-2xl text-ligthYellowText">
+          <h1 className=" md:text-4xl text-ligthYellowText">Nuestros Productos</h1>
+          <p className="text-start md:mt-5 md:text-center text-xs md:text-xl font-medium text-black">
             ¡Bienvenido al delicioso mundo de RIMBERIO! Cada día, horneamos
             nuestros productos con recetas tradicionales, ingredientes de la
             mejor calidad, y el tiempo justo para que cada pieza sea perfecta.
@@ -56,14 +57,16 @@ console.log(coffes , "esto son los cafes ");
         </div>
       </motion.div>
       <section className="flex items-start mb-8 gap-6 flex-col px-2  md:px-12">
-        <div>
+        <div className="flex justify-between items-end w-full ">
           <StaggeredDropDown selected={selected} setSelected={setSelected} />
+          <span className="text-xl font-semibold flex justify-center items-end gap-3"><StarHalfIcon></StarHalfIcon> Califica nuestros productos !<StarHalfIcon></StarHalfIcon> </span>
         </div>
         <ProductsSelected
           bakeries={bakeries}
           coffes={coffes}
           products={products}
           selected={selected}
+          loading={loading}
         ></ProductsSelected>
       </section>
       <FooterComponent></FooterComponent>
